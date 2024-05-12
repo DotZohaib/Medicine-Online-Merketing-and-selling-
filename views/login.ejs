@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="icon" href="/images/1705994855733-removebg-preview.png">
+    <link rel="stylesheet" href="/stylesheets/utility.css">
+</head>
+<style>
+  #error{
+  color: red;
+}
+</style>
+<body>
+    <div class="login-box">
+        <h2>Login</h2>
+        <% if(error.length > 0){ %>
+          <p id="error"><%= error %> </p>
+        <% } %>
+        <form action="/login" method="post">
+          <div class="user-box">
+            <input type="text" name="username" required="">
+            <label>Username</label>
+          </div>
+          <div class="user-box">
+            <input type="password" name="password" required="">
+            <label>Password</label>
+          </div>
+          <button href="#">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            Submit
+          </button>
+        </form>
+        <p>Don't have an account? <a href="/">Sign Up</a></p>
+      </div>
+</body>
+</html>
